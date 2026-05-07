@@ -174,19 +174,19 @@ Ingrese la fecha del préstamo (DD/MM/AAAA) o presione Enter para usar hoy:
 Préstamo registrado exitosamente. Equipo 'Mouse inalámbrico' prestado a Carlos López el 25/03/2025.
 
 ## Captura termianl
-![Ejecución prestamos](images/prestamo_terminal.png)
+![Ejecución prestamos](images/prestamos_terminal.png)
 ## Captura opción 1
-![Ejecución prestamos opción 1](images/prestamo1.png)
+![Ejecución prestamos opción 1](images/prestamos1.png)
 ## Captura opción 2
-![Ejecución prestamos opnión 2](images/prestamo2.png)
+![Ejecución prestamos opnión 2](images/prestamos2.png)
 ## Captura opción 3
-![Ejecución prestamos opción 3](images/prestamo3.png)
+![Ejecución prestamos opción 3](images/prestamos3.png)
 ## Captura opción 4
-![Ejecución prestamos opción 4](images/prestamo4.png)
+![Ejecución prestamos opción 4](images/prestamos4.png)
 ## Captura opción 5
-![Ejecución prestamos opción 5](images/prestamo5.png)
+![Ejecución prestamos opción 5](images/prestamos5.png)
 ## Captura opción 6
-![Ejecución prestamos opción 6](images/prestamo6.png)
+![Ejecución prestamos opción 6](images/prestamos6.png)
 
 ### Reflexión personal
 Este reto fue el más completo porque integró casi todos los conceptos vistos: listas, tuplas, diccionarios, funciones, validaciones y un menú interactivo. Aprendí a diseñar un sistema modular donde cada función tiene una responsabilidad única. El mayor desafío fue manejar correctamente la estructura anidada del diccionario (diccionario dentro de diccionario) y asegurar que al modificar el estado de disponibilidad no se perdiera el historial de préstamos. También comprendí la utilidad de las tuplas para garantizar que los datos de un préstamo (usuario + fecha) sean inmutables. La experiencia de construir un programa completo, desde la estructura de datos hasta la interacción con el usuario, me dio una visión más realista de cómo se aplica la programación en problemas cotidianos. Me siento satisfecho de poder extender el sistema fácilmente (por ejemplo, agregando fechas de devolución o buscando préstamos por usuario).
