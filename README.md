@@ -116,3 +116,78 @@ Saldo final: 1200
 
 ---
 
+### Explicación del diseño de clases y encapsulación
+
+En este proyecto no se definieron clases propias, sino que se utilizaron **estructuras de datos nativas** de Python para modelar el sistema:
+
+- **Diccionario principal `equipos`**:
+  ```python
+  equipos = {
+      "nombre_equipo": {
+          "disponible": bool,
+          "prestamos": [(usuario, fecha), ...]
+      }
+  }
+
+Listas: para almacenar el historial de préstamos de cada equipo (lista de tuplas).
+
+Tuplas: cada préstamo es una tupla (usuario, fecha), inmutable para garantizar que los datos no se modifiquen accidentalmente.
+
+Aunque no hay encapsulación formal (no hay clases con atributos privados), el diseño es modular: cada función opera sobre el diccionario global y se encarga de validar los datos. Se aplican principios de abstracción y modularidad al separar la lógica en funciones bien definidas.
+
+### Ejemplos de ejecución y capturas sugeridas
+
+Ejemplo de flujo (textual):
+
+========================================
+   SISTEMA DE PRÉSTAMOS DE EQUIPOS
+========================================
+1. Ver equipos disponibles
+2. Registrar préstamo
+3. Devolver equipo
+4. Ver historial de préstamos
+5. Agregar nuevo equipo
+6. Salir del programa
+========================================
+Seleccione una opción (1-6): 5
+
+--- Agregar Nuevo Equipo ---
+Ingrese el nombre del nuevo equipo: Mouse inalámbrico
+Equipo 'Mouse inalámbrico' agregado exitosamente al inventario.
+
+Presione Enter para continuar...
+
+--- Menú de nuevo ---
+Seleccione una opción (1-6): 2
+
+--- Registrar Préstamo ---
+--- Lista de Equipos ---
+- Laptop Dell XPS: Disponible
+- Proyector Epson: Disponible
+- Tableta Wacom: Prestado
+- Mouse inalámbrico: Disponible
+
+Ingrese el nombre exacto del equipo a prestar: Mouse inalámbrico
+Ingrese el nombre del usuario que realiza el préstamo: Carlos López
+Ingrese la fecha del préstamo (DD/MM/AAAA) o presione Enter para usar hoy: 
+
+Préstamo registrado exitosamente. Equipo 'Mouse inalámbrico' prestado a Carlos López el 25/03/2025.
+
+## Captura termianl
+![Ejecución prestamos](images/prestamo_terminal.png)
+## Captura opción 1
+![Ejecución prestamos opción 1](images/prestamo1.png)
+## Captura opción 2
+![Ejecución prestamos opnión 2](images/prestamo2.png)
+## Captura opción 3
+![Ejecución prestamos opción 3](images/prestamo3.png)
+## Captura opción 4
+![Ejecución prestamos opción 4](images/prestamo4.png)
+## Captura opción 5
+![Ejecución prestamos opción 5](images/prestamo5.png)
+## Captura opción 6
+![Ejecución prestamos opción 6](images/prestamo6.png)
+
+### Reflexión personal
+Este reto fue el más completo porque integró casi todos los conceptos vistos: listas, tuplas, diccionarios, funciones, validaciones y un menú interactivo. Aprendí a diseñar un sistema modular donde cada función tiene una responsabilidad única. El mayor desafío fue manejar correctamente la estructura anidada del diccionario (diccionario dentro de diccionario) y asegurar que al modificar el estado de disponibilidad no se perdiera el historial de préstamos. También comprendí la utilidad de las tuplas para garantizar que los datos de un préstamo (usuario + fecha) sean inmutables. La experiencia de construir un programa completo, desde la estructura de datos hasta la interacción con el usuario, me dio una visión más realista de cómo se aplica la programación en problemas cotidianos. Me siento satisfecho de poder extender el sistema fácilmente (por ejemplo, agregando fechas de devolución o buscando préstamos por usuario).
+
